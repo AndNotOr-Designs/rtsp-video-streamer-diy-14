@@ -18,7 +18,8 @@
  *  Core Debug Level: "None"
  *  COM Port: Depends *On Your System*
  *********************************************************************************************************************/
- 
+
+#include <secureSettings.h>
 #include "src/OV2640.h"
 #include <WiFi.h>
 #include <WebServer.h>
@@ -61,12 +62,13 @@ WebServer server(80);
 WiFiServer rtspServer(8554);
 #endif
 
-
+/*
 #ifdef SOFTAP_MODE
 IPAddress apIP = IPAddress(192, 168, 1, 1);
 #else
 #include "wifikeys.h"
 #endif
+*/
 
 #ifdef ENABLE_WEBSERVER
 void handle_jpg_stream(void)
